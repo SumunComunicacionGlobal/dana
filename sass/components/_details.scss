@@ -1,0 +1,32 @@
+details {
+    overflow: hidden;
+
+    .wp-block-details--content {
+        max-block-size: 0;
+        transition: max-block-size 1s ease-in-out, content-visibility 1s ease-in-out allow-discrete;
+    }
+    
+    summary {
+        font-weight: 700;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &[open] {
+        .wp-block-details--content {
+            max-block-size: 100vh;
+        }
+
+        & > summary:before { 
+            transform: rotate(90deg); 
+        }
+    }
+}
+
+
+
+
+
+

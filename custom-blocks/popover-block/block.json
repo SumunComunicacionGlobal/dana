@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "popover-block/popover-block",
+	"version": "0.1.0",
+	"title": "Popover",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Show a button with a popover content",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "popover-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

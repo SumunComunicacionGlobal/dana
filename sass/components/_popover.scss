@@ -1,0 +1,43 @@
+[popover] {
+    transition: opacity 0.2s, transform 0.2s, display 0.2s allow-discrete;
+    opacity: 0;
+    transform: translateY(3rem);
+  
+    &:popover-open {
+        opacity: 1;
+        transform: none;
+  
+        @starting-style {
+            & {
+            opacity: 0;
+            transform: translateY(-1rem);
+            }
+        }
+    }
+}
+
+button.wp-block-popover--button[popovertarget] {
+    border: 0;
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+    font-size: 32px;
+    line-height: 1;
+    height: 2rem;
+    width: 2rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.wp-block-popover--content {
+    inset: auto;
+    background-color: var(--wp--preset--color--secondary-10);
+    border: 0;
+    top: anchor(bottom);
+    left: anchor(left);
+    max-width: 300px;
+    margin-top: 0 !important;
+    padding: 0 1rem;
+
+}
